@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="arm,cortex," />
 
 
 
@@ -79,13 +79,20 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Corner Shop">
-<meta property="og:url" content="https://helyao.github.io/index.html">
+<meta name="description" content="ARM以各种RISC处理器内核而著称，ARM公司本身不生产芯片，而是ARM分布于世界各地的授权商制造的，本身只提供IP核。 1. ARM架构发展ARMv1架构只在原型机ARM1出现过，26位寻址空间(64MB)，没有用于商业产品。 ARMv2架构在ARM2(v2)和ARM3(v2a)上使用了该架构，版本2a是版本2的变种。依旧是26位寻址空间，在ARM3上出现了片上Cache。 ARMv3架构AR">
+<meta name="keywords" content="arm,cortex">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ARM处理器内核">
+<meta property="og:url" content="https://helyao.github.io/2018/07/10/ARM处理器内核/index.html">
 <meta property="og:site_name" content="Corner Shop">
+<meta property="og:description" content="ARM以各种RISC处理器内核而著称，ARM公司本身不生产芯片，而是ARM分布于世界各地的授权商制造的，本身只提供IP核。 1. ARM架构发展ARMv1架构只在原型机ARM1出现过，26位寻址空间(64MB)，没有用于商业产品。 ARMv2架构在ARM2(v2)和ARM3(v2a)上使用了该架构，版本2a是版本2的变种。依旧是26位寻址空间，在ARM3上出现了片上Cache。 ARMv3架构AR">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://helyao.github.io/2018/07/10/ARM处理器内核/uploads/Cortex-A-Pro.png">
+<meta property="og:updated_time" content="2018-07-11T13:19:02.391Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Corner Shop">
+<meta name="twitter:title" content="ARM处理器内核">
+<meta name="twitter:description" content="ARM以各种RISC处理器内核而著称，ARM公司本身不生产芯片，而是ARM分布于世界各地的授权商制造的，本身只提供IP核。 1. ARM架构发展ARMv1架构只在原型机ARM1出现过，26位寻址空间(64MB)，没有用于商业产品。 ARMv2架构在ARM2(v2)和ARM3(v2a)上使用了该架构，版本2a是版本2的变种。依旧是26位寻址空间，在ARM3上出现了片上Cache。 ARMv3架构AR">
+<meta name="twitter:image" content="https://helyao.github.io/2018/07/10/ARM处理器内核/uploads/Cortex-A-Pro.png">
 
 
 
@@ -115,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://helyao.github.io/"/>
+  <link rel="canonical" href="https://helyao.github.io/2018/07/10/ARM处理器内核/"/>
 
 
 
 
 
-  <title>Corner Shop</title>
+  <title>ARM处理器内核 | Corner Shop</title>
   
 
 
@@ -150,8 +157,7 @@
     
   
 
-  <div class="container sidebar-position-right 
-  page-home">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -292,312 +298,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://helyao.github.io/2018/07/11/对话类智能硬件解决方案梳理/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Helyao.">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Corner Shop">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/11/对话类智能硬件解决方案梳理/" itemprop="url">对话类智能硬件解决方案梳理</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-11T17:49:29+08:00">
-                2018-07-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="蓝牙耳机-手机终端方案"><a href="#蓝牙耳机-手机终端方案" class="headerlink" title="蓝牙耳机+手机终端方案"></a>蓝牙耳机+手机终端方案</h2><blockquote>
-<p>该模式的解决方案可以在小范围环境下，可用于车内，会议室等可以保证蓝牙连接的场所，通过蓝牙连接手机或其他终端产品，实现云对话。</p>
-</blockquote>
-<h3 id="硬件平台"><a href="#硬件平台" class="headerlink" title="硬件平台"></a>硬件平台</h3><ol>
-<li>炬力ATS系列<br>主流程度：<div class="fa fa-star"></div><div class="fa fa-star"></div><div class="fa fa-star"></div><div class="fa fa-star"></div><div class="fa fa-star"></div><br>主要采用MIPS32架构实现低功耗的无线蓝牙音频方案</li>
-</ol>
-<h3 id="产品场景与商业模式"><a href="#产品场景与商业模式" class="headerlink" title="产品场景与商业模式"></a>产品场景与商业模式</h3><h2 id="无屏WiFi语音对话方案"><a href="#无屏WiFi语音对话方案" class="headerlink" title="无屏WiFi语音对话方案"></a>无屏WiFi语音对话方案</h2><blockquote>
-<p>选择可以直接通过WiFi联网的智能终端，实现云对话</p>
-</blockquote>
-<h3 id="硬件平台-1"><a href="#硬件平台-1" class="headerlink" title="硬件平台"></a>硬件平台</h3><h3 id="产品场景与商业模式-1"><a href="#产品场景与商业模式-1" class="headerlink" title="产品场景与商业模式"></a>产品场景与商业模式</h3><h2 id="有屏WiFi语音对话方案"><a href="#有屏WiFi语音对话方案" class="headerlink" title="有屏WiFi语音对话方案"></a>有屏WiFi语音对话方案</h2><blockquote>
-<p>选择可以直接通过WiFi联网的智能终端，实现以云对话辅助的PAD场景</p>
-</blockquote>
-<h3 id="硬件平台-2"><a href="#硬件平台-2" class="headerlink" title="硬件平台"></a>硬件平台</h3><ol>
-<li>全志A33<br>主流程度：<div class="fa fa-star"></div><div class="fa fa-star"></div><div class="fa fa-star"></div><div class="fa fa-star"></div><div class="fa fa-star"></div><br>可以适用低端的Android和Linux平板方案，使用Cortex-A7内核，搭载Mali 400 MP2的GPU，支持1080P高清视频处理及播放，最大支持1280x800的屏幕，支持500万像素摄像头。</li>
-</ol>
-<h3 id="产品场景与商业模式-2"><a href="#产品场景与商业模式-2" class="headerlink" title="产品场景与商业模式"></a>产品场景与商业模式</h3>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://helyao.github.io/2018/07/11/各大芯片商以及解决方案介绍/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Helyao.">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Corner Shop">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/11/各大芯片商以及解决方案介绍/" itemprop="url">各大芯片商以及解决方案介绍</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-11T15:37:31+08:00">
-                2018-07-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hardware/" itemprop="url" rel="index">
-                    <span itemprop="name">hardware</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="炬力-炬芯-Actions-珠海"><a href="#炬力-炬芯-Actions-珠海" class="headerlink" title="炬力/炬芯 - Actions - 珠海"></a>炬力/炬芯 - Actions - 珠海</h2><blockquote>
-<p>炬芯为炬力的全资子公司，主要发展芯片业务。炬力2001年成立，主要使用MIPS架构芯片，而未选择ARM架构，使得在平板时代发展困难，目前公司MIPS架构的芯片依旧占据主导地位。</p>
-</blockquote>
-<p>芯片主要有四个系列</p>
-<ol>
-<li><p>四核处理器<br>目前的三款芯片S500、S700、S900均采用Cortex-A系列内核，可运行Linux和Android系统，支持1080P视频的显示和编解码。</p>
-</li>
-<li><p>ATS系列<br>该系列为蓝牙音频芯片，主要采用MIPS架构，采用蓝牙V4.2双模设计，是专为便携式和无线蓝牙音频所设计，满足市场需求的高性能，低成本和低功耗等特点，定位中高端蓝牙音频市场，广泛应用于蓝牙音箱、蓝牙耳机、蓝牙车载、智能家居等一切跟蓝牙音频相关的方案。</p>
-</li>
-<li><p>ATJ系列<br>该系列为高品质录音和音频播放产品，主要采用MIPS+DSP双核架构。</p>
-</li>
-<li><p>ATB系列<br>目前ATB系列无详细产品介绍</p>
-</li>
-</ol>
-<h2 id="展讯-Spreadtrum-上海"><a href="#展讯-Spreadtrum-上海" class="headerlink" title="展讯 - Spreadtrum - 上海"></a>展讯 - Spreadtrum - 上海</h2><blockquote>
-<p>展讯被清华紫光与2013年全资收购，致力于智能手机的芯片平台开发。</p>
-</blockquote>
-<p>芯片主要提供多核的3G，4G手机平台方案。</p>
-<h2 id="瑞芯微-Rockchip-福州"><a href="#瑞芯微-Rockchip-福州" class="headerlink" title="瑞芯微 - Rockchip - 福州"></a>瑞芯微 - Rockchip - 福州</h2><blockquote>
-<p>瑞星微成立于2001年，</p>
-</blockquote>
-<p>芯片主要有以下系列：</p>
-<ol>
-<li><p>RK33系列</p>
-</li>
-<li><p>RK32系列</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -627,9 +330,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/10/ARM处理器内核/" itemprop="url">ARM处理器内核</a></h1>
+          <h1 class="post-title" itemprop="name headline">ARM处理器内核</h1>
         
 
         <div class="post-meta">
@@ -701,9 +402,7 @@
       
 
       
-        
-          
-            <p>ARM以各种RISC处理器内核而著称，ARM公司本身不生产芯片，而是ARM分布于世界各地的授权商制造的，本身只提供IP核。</p>
+        <p>ARM以各种RISC处理器内核而著称，ARM公司本身不生产芯片，而是ARM分布于世界各地的授权商制造的，本身只提供IP核。</p>
 <h2 id="1-ARM架构发展"><a href="#1-ARM架构发展" class="headerlink" title="1. ARM架构发展"></a>1. ARM架构发展</h2><h3 id="ARMv1架构"><a href="#ARMv1架构" class="headerlink" title="ARMv1架构"></a>ARMv1架构</h3><p>只在原型机ARM1出现过，26位寻址空间(64MB)，没有用于商业产品。</p>
 <h3 id="ARMv2架构"><a href="#ARMv2架构" class="headerlink" title="ARMv2架构"></a>ARMv2架构</h3><p>在ARM2(v2)和ARM3(v2a)上使用了该架构，版本2a是版本2的变种。依旧是26位寻址空间，在ARM3上出现了片上Cache。</p>
 <h3 id="ARMv3架构"><a href="#ARMv3架构" class="headerlink" title="ARMv3架构"></a>ARMv3架构</h3><p>ARM6采用了v3架构，具有32位寻址空间(4GB)，增加了CPSR当前程序状态寄存器(Current Program Status Register)和SPSR程序状态保存寄存器(Saved Program Status Register)</p>
@@ -844,8 +543,6 @@
 <p><strong>乱序执行</strong>是指CPU允许将多条指令不按程序规定的顺序分开发送给各相应电路单元处理的技术。CPU的乱序执行引擎可以根据各单元电路的空闲状态和各指令是否可以提前执行，将可以提前执行的指令立即发送给相应电路执行。</p>
 </blockquote>
 
-          
-        
       
     </div>
     
@@ -860,170 +557,42 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://helyao.github.io/2018/07/10/智能硬件选型需关注的核心参数/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Helyao.">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Corner Shop">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/10/智能硬件选型需关注的核心参数/" itemprop="url">智能硬件选型需关注的核心参数</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-10T14:40:36+08:00">
-                2018-07-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hardware/" itemprop="url" rel="index">
-                    <span itemprop="name">hardware</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/arm/" rel="tag"># arm</a>
           
-
+            <a href="/tags/cortex/" rel="tag"># cortex</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>智能硬件解决方案目前主要是基于<strong>RTOS</strong>，<strong>Linux</strong>，<strong>Android</strong>三种片上系统实现。</p>
-<p>当智能硬件的产品经理选择一款主处理器时，首先要考虑的是<strong>产品定位</strong>，这个决定了可选芯片的品牌。<br>如果产品的定位为中低端产品，那么在选择上较多使用中日韩芯片公司所生产的芯片。<br>这类芯片多为高集成度的CPU，优点是可以降低接口设计时外围电路器件的成本，但是缺点会使得扩展性降低。</p>
-<hr>
-<h2 id="专有名词"><a href="#专有名词" class="headerlink" title="专有名词"></a>专有名词</h2><p>在选择芯片前，需要先了解一些专有名词。</p>
-<h3 id="1-SoC"><a href="#1-SoC" class="headerlink" title="1. SoC"></a>1. SoC</h3><p>SoC，即System on Chip，芯片级系统（片上系统）。<br>一种将微处理器、模拟IP核、数字IP核和存储器（或片外存储控制接口）集成在单一芯片上。</p>
-<h3 id="2-MMU"><a href="#2-MMU" class="headerlink" title="2. MMU"></a>2. MMU</h3><p>MMU，即Memory Management Unit，内存管理单元。<br>是中央处理器(CPU)中用来管理虚拟存储器、物理存储器的控制线路，同时也负责虚拟地址映射为物理地址，以及提供硬件机制的内存访问授权，多用户多进程操作系统。</p>
-<blockquote>
-<p>带MMU的例如ARM9，ARM11，可以成为嵌入式CPU（控制器）；而不带MMU的例如ARM7，无法运行诸如Linux，WinCE等多用户多进程操作系统的，只能称为MCU（微控制器）</p>
-</blockquote>
-<hr>
-<h2 id="重点参数"><a href="#重点参数" class="headerlink" title="重点参数"></a>重点参数</h2><h3 id="1-CPU架构"><a href="#1-CPU架构" class="headerlink" title="1. CPU架构"></a>1. CPU架构</h3><p>架构决定芯片的最佳使用场景，例如低功耗蓝牙模块可以选择MIPS架构的芯片，需要上Linux或者Android系统的应用可以选择Cortex-A系列的芯片，例如Cortex-A9，Cortex-A53等。</p>
-<h3 id="2-片上GPU"><a href="#2-片上GPU" class="headerlink" title="2. 片上GPU"></a>2. 片上GPU</h3><p>对于类手机平板的产品中，图形实现需要SoC里的GPU进行加速，可以支持1080P甚至2K的显示，根据显示的画幅尺寸需求，选择合适的SoC。</p>
-<h3 id="3-视频编解码器"><a href="#3-视频编解码器" class="headerlink" title="3. 视频编解码器"></a>3. 视频编解码器</h3><p>根据是否具有图像传输要求，选择响应画幅的Video Decoder和Video Encoder。</p>
-<h3 id="4-片上存储"><a href="#4-片上存储" class="headerlink" title="4. 片上存储"></a>4. 片上存储</h3><p>片上存储，Build-in RAM，用于保存数据和程序。</p>
-<h3 id="5-外设接口与数量"><a href="#5-外设接口与数量" class="headerlink" title="5. 外设接口与数量"></a>5. 外设接口与数量</h3><p>对UART的，对CAN接口的数量需求，合理选择相应的芯片，否则需要在片外增加芯片，同时提高开发难度。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/10/智能硬件选型需关注的核心参数/" rel="next" title="智能硬件选型需关注的核心参数">
+                <i class="fa fa-chevron-left"></i> 智能硬件选型需关注的核心参数
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/11/各大芯片商以及解决方案介绍/" rel="prev" title="各大芯片商以及解决方案介绍">
+                各大芯片商以及解决方案介绍 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
       
     </footer>
   </div>
@@ -1033,10 +602,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -1044,6 +614,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -1064,8 +638,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1129,6 +712,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-ARM架构发展"><span class="nav-number">1.</span> <span class="nav-text">1. ARM架构发展</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ARMv1架构"><span class="nav-number">1.1.</span> <span class="nav-text">ARMv1架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARMv2架构"><span class="nav-number">1.2.</span> <span class="nav-text">ARMv2架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARMv3架构"><span class="nav-number">1.3.</span> <span class="nav-text">ARMv3架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARMv4架构"><span class="nav-number">1.4.</span> <span class="nav-text">ARMv4架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARMv5架构"><span class="nav-number">1.5.</span> <span class="nav-text">ARMv5架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARMv6架构"><span class="nav-number">1.6.</span> <span class="nav-text">ARMv6架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARMv7架构"><span class="nav-number">1.7.</span> <span class="nav-text">ARMv7架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARMv8架构"><span class="nav-number">1.8.</span> <span class="nav-text">ARMv8架构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Cortex"><span class="nav-number">2.</span> <span class="nav-text">2. Cortex</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Cortex-A系列"><span class="nav-number">2.1.</span> <span class="nav-text">Cortex-A系列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cortex-R系列"><span class="nav-number">2.2.</span> <span class="nav-text">Cortex-R系列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cortex-M系列"><span class="nav-number">2.3.</span> <span class="nav-text">Cortex-M系列</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-其他主流架构"><span class="nav-number">3.</span> <span class="nav-text">3. 其他主流架构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MIPS"><span class="nav-number">3.1.</span> <span class="nav-text">MIPS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#X86"><span class="nav-number">3.2.</span> <span class="nav-text">X86</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三种架构总的来说"><span class="nav-number">3.3.</span> <span class="nav-text">三种架构总的来说</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1269,6 +868,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
